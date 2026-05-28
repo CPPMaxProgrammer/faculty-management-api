@@ -1,24 +1,26 @@
 <?php
 
-$host = "mysql.railway.internal";
-$dbname = "railway";
-$username = "root";
-$password = "dcZtchEGxZFCiWjsNxlSmDATMyYGYKOd";
+header('Content-Type: application/json');
 
-try
-{
+try {
+
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8",
-        $username,
-        $password
+        "mysql:host=mysql.railway.internal;port=3306;dbname=railway",
+        "root",
+        "dcZtchEGxZFCiWjsNxlSmDATMyYGYKOd"
     );
 
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo json_encode([
+        "success" => true,
+        "message" => "Railway database connected",
+        "server_time" => date("Y-m-d H:i:s")
+    ]);
+
 }
 catch(PDOException $e)
 {
-    die(json_encode([
+    echo json_encode([
         "success" => false,
         "message" => $e->getMessage()
-    ]));
+    ]);
 }
