@@ -10,6 +10,8 @@ try {
         "dcZtchEGxZFCiWjsNxlSmDATMyYGYKOd"
     );
 
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     echo json_encode([
         "success" => true,
         "message" => "Railway database connected",
@@ -24,3 +26,5 @@ catch(PDOException $e)
         "message" => $e->getMessage()
     ]);
 }
+
+exit;
