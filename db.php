@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 try {
 
     $pdo = new PDO(
-        "mysql:host=mysql.railway.internal;port=3306;dbname=railway",
+        "mysql:host=yamabiko.proxy.rlwy.net;port=22613;dbname=railway",
         "root",
         "dcZtchEGxZFCiWjsNxlSmDATMyYGYKOd"
     );
