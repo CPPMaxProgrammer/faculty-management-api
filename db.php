@@ -1,9 +1,9 @@
 <?php
 
-$host = "sql312.infinityfree.com";
-$dbname = "if0_XXXXXXX_facultymanagement";
-$username = "if0_XXXXXXX";
-$password = "YOUR_PASSWORD";
+$host = "sql102.infinityfree.com";
+$dbname = "if0_42024963_facultymanagement";
+$username = "if0_42024963";
+$password = "4NmTH4mcJLt";
 
 try
 {
